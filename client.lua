@@ -2,10 +2,10 @@ local isTalking = false
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(200) -- Adjust the interval as needed
+        Citizen.Wait(200) 
 
         local playerPed = PlayerPedId()
-        local playerId = GetPlayerServerId(PlayerId()) -- Retrieve player's server ID
+        local playerId = GetPlayerServerId(PlayerId()) 
         local playerHealth = GetEntityHealth(playerPed) - 100
         local playerArmor = GetPedArmour(playerPed)
         local vehicle = GetVehiclePedIsIn(playerPed, false)
@@ -13,7 +13,7 @@ Citizen.CreateThread(function()
         local speed = 0
 
         if inVehicle then
-            speed = GetEntitySpeed(vehicle) * 3.6 -- Convert from m/s to km/h
+            speed = GetEntitySpeed(vehicle) * 3.6 
         end
 
         -- Determine voice status
@@ -21,7 +21,7 @@ Citizen.CreateThread(function()
         if newTalking ~= isTalking then
             isTalking = newTalking
 
-            -- Send initial load message
+         
             SendNUIMessage({
                 type = 'initialLoad',
                 id = playerId,
@@ -31,7 +31,7 @@ Citizen.CreateThread(function()
             })
         end
 
-        -- Always send update status message
+   
         SendNUIMessage({
             type = 'updateStatus',
             id = playerId,

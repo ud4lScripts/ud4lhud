@@ -61,23 +61,23 @@ body {
     background-color: rgba(52, 152, 219, 0.8);
 }
 
-/* New styles for voice icon */
+
 #voice-icon {
-    color: white; /* Default color */
+    color: white; 
 }
 
 #voice-icon.active {
-    color: #4CAF50; /* Green color when active (talking) */
+    color: #4CAF50; 
 }
 
 
 #player-info {
     text-align: left;
     margin-right: auto;
-    padding-left: 10px; /* Adjust spacing as needed */
+    padding-left: 10px; 
 }
 
 #player-id {
     color: white;
-    font-size: 14px; /* Adjust font size as needed */
+    font-size: 14px; 
 }
