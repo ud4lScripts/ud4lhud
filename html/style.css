@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: none;
+}
+
+#hud {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+    z-index: 9999;
+}
+
+.status {
+    text-align: center;
+    color: white;
+}
+
+.bar-container {
+    width: 100px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.bar {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.bar .icon {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+
+.bar #health-bar .icon i {
+    font-size: 24px;
+    color: #FF5733;
+}
+
+.bar #armor-bar .icon i {
+    font-size: 24px;
+    color: #3498DB;
+}
+
+
+#health-bar {
+    background-color: rgba(255, 87, 51, 0.8);
+}
+
+#armor-bar {
+    background-color: rgba(52, 152, 219, 0.8);
+}
+
+/* New styles for voice icon */
+#voice-icon {
+    color: white; /* Default color */
+}
+
+#voice-icon.active {
+    color: #4CAF50; /* Green color when active (talking) */
+}
+
+
+#player-info {
+    text-align: left;
+    margin-right: auto;
+    padding-left: 10px; /* Adjust spacing as needed */
+}
+
+#player-id {
+    color: white;
+    font-size: 14px; /* Adjust font size as needed */
+}

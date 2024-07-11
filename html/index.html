@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HUD</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="hud">
+        <div id="player-info" class="status">
+            <div id="player-id">ID: Loading...</div>
+            <div id="voice-icon"><i class="fas fa-microphone"></i></div> <!-- Microphone icon -->
+        </div>
+        <div class="status">
+            <div class="bar-container">
+                <div class="bar" id="health-bar">
+                    <div class="icon"><i class="fas fa-heart"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="status">
+            <div class="bar-container">
+                <div class="bar" id="armor-bar">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
